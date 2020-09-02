@@ -110,8 +110,18 @@ bool LinkedList<T>::removeBack()
 
 	if (isEmpty() == false )
 	{
-
-
+		count = size();
+		Node<T>* temp = m_front;
+		for (int i = 0; i < count; i++)
+		{
+			temp = temp->getNext();
+		}
+		secondintoLast = temp;
+    lastNode = secondintoLast->getNext();
+    secondintoLast->setNext(lastNode->getNext());
+    lastNode->setNext(nullptr);
+    delete lastNode;
+    lastNode = nullptr;
 	}
 
 	m_size--;
