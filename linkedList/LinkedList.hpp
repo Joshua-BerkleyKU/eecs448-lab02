@@ -40,13 +40,13 @@ bool LinkedList<T>::search(T value) const
 
 		for (int i = 0; i <= m_size; i++)
 		{
-			if (temp.getValue() == value)
+			if (temp->getValue() == value)
 			{
 				isFound = true;
 			}
 			else
 			{
-				temp = temp.getNext();
+				temp = temp->getNext();
 			}
 		}
 
@@ -110,7 +110,7 @@ bool LinkedList<T>::removeBack()
 
 	if (isEmpty() == false )
 	{
-		count = size();
+		int count = size();
 		Node<T>* temp = m_front;
 		for (int i = 0; i < count; i++)
 		{
