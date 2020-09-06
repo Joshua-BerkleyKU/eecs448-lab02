@@ -113,7 +113,7 @@ bool LinkedList<T>::removeBack()
 		if(m_front->getNext() == nullptr)
 		{
 			delete m_front;
-			m_front = nullptr
+			m_front = nullptr;
 			m_size--;
 			isRemoved = true;
 		}
